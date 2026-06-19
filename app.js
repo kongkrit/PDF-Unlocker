@@ -49,6 +49,7 @@ function doUnlock() {
     const worker = new Worker('./worker.js');
 
     worker.onmessage = ({ data }) => {
+      if (data.status) { setStatus('working', data.status); return; }
       busy = false;
       unlockBtn.disabled = false;
 
