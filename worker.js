@@ -12,7 +12,7 @@ self.onmessage = async ({ data: { bytes, password, name } }) => {
     self.postMessage({ status: 'Running qpdf…' });
     qpdf.FS.writeFile('/in.pdf', bytes);
     const args = ['--decrypt', '/in.pdf', '/out.pdf'];
-    if (password) args.unshift('--password', password);
+    if (password) args.unshift(`--password=${password}`);
     console.log('[qpdf] callMain args:', args);
     const code = qpdf.callMain(args);
     console.log('[qpdf] exit code:', code, 'stderr:', stderr);
