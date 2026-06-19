@@ -4,13 +4,11 @@ Remove the open password from a PDF you already have access to. **Nothing leaves
 
 ## Features
 
-- **Totally offline** — works with no internet after first visit; WASM engine vendored locally, no CDN
-- **No re-rendering** — uses `qpdf --decrypt` (object-level strip); bytes are preserved exactly
-- **No server, no upload, no tracking** — decryption runs in a Web Worker in your browser
-- **Drag-and-drop or click to select** — both work
-- **Auto-trigger** — decryption starts 400ms after you stop typing the password
-- **Permissions-only PDFs** — leave the password blank to remove owner restrictions only
-- **Dark / light theme** — toggle top-right; preference saved
+- **Nothing leaves your device** — no server, no upload, no tracking
+- **Works offline** — fully functional with no internet after first visit
+- **File quality preserved** — the PDF is decrypted in place; no re-rendering, no quality loss
+- **Drop a PDF, type the password, done**
+- **Dark / light theme**
 
 ## Install as app (PWA)
 
